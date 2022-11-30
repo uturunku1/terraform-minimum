@@ -143,15 +143,15 @@ variable "name_length" {
 #   length = var.name_length
 # }
 
-# output "pet" {
-#   value = random_pet.always_error.id
-# }
-# resource "random_pet" "pet" {
-#   prefix = "{"
-# }
-# output "fail-at-apply" {
-#   value = jsondecode(random_pet.pet.id)
-# }
+output "pet" {
+  value = random_pet.always_error.id
+}
+resource "random_pet" "pet" {
+  prefix = "{"
+}
+output "fail-at-apply" {
+  value = jsondecode(random_pet.pet.id)
+}
 
 # locals {
 #   a = join(["foo"], "bar")
