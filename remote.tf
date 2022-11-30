@@ -1,5 +1,3 @@
-// prod token for my own og: uZWh1Izoxy0Efg.atlasv1.8FFt5E0SBnu8oeGE7ow8gmpsetJHyRQ7mjzXIkzbjsPG7cwmXBEk1IFW6vKro55C9bg
-// token for prod AQIT org:sBmyK8cxkbi8OA.atlasv1.K3Mx3XVlczSaX6VC6NT1IxSO8j94UeajX4xefyMAisIlQJPJSW2ChUfKR161GyKvIds
 terraform {
   cloud {
     organization = "hashicorp"
