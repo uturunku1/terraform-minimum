@@ -145,13 +145,17 @@ resource "random_pet" "always_error" {
   length = var.name_length
 }
 
+output "fail-at-apply" {
+  value = jsondecode(random_pet.pet.id)
+}
+
 output "pet" {
   value = random_pet.always_error.id
 }
 
-locals {
-  a = join(["foo"], "bar")
-  b = max([1, 2, 3])
-  c = abs("minus five")
-  d = jsondecode("[1, 2, 3")
-}
+# locals {
+#   a = join(["foo"], "bar")
+#   b = max([1, 2, 3])
+#   c = abs("minus five")
+#   d = jsondecode("[1, 2, 3")
+# }
