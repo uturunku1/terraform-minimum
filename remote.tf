@@ -28,7 +28,7 @@ resource "null_resource" "test" {
 
 variable "username" {
   type = string
-  default = "uturunku"
+  default = "uturunku1"
 }
 
 resource "random_pet" "always_new_name" {
