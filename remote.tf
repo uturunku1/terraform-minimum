@@ -144,7 +144,9 @@ resource "random_pet" "always_error" {
   }
   length = var.name_length
 }
-
+resource "random_pet" "pet" {
+  prefix = "{"
+}
 output "fail-at-apply" {
   value = jsondecode(random_pet.pet.id)
 }
