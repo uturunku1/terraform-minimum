@@ -38,8 +38,8 @@ resource "random_pet" "always_new_name" {
   length = 3
 }
 
-# resource "random_uuid" "test" {
-# } #generates random uuid string that is intended to be used as unique identifiers/names for other resources
+resource "random_uuid" "test" {
+} #generates random uuid string that is intended to be used as unique identifiers/names for other resources
 # resource "random_uuid" "test2" {
 # }
 
