@@ -57,8 +57,8 @@ resource "null_resource" "random_uuid" {
   }
 }
 
-# resource "null_resource" "a" {
-# }
+resource "null_resource" "a" {
+}
 
 # resource "null_resource" "b" {
 #   depends_on = [
