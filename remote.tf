@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "lucesorg_grace_gone_quota_gone"
+    organization = "lucesorg-only-applylimitflag"
     hostname = "tfcdev-326ff8f0.ngrok.io"
     workspaces {
       name = "random-null-resources"
@@ -40,6 +40,8 @@ resource "random_pet" "always_new_name" {
 
 resource "random_uuid" "test" {
 } #generates random uuid string that is intended to be used as unique identifiers/names for other resources
+resource "random_uuid" "test2" {
+}
 
 resource "null_resource" "username" {
   triggers = {
