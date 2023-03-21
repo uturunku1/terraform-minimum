@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "hashicorp"
+    organization = "lucesorg_grace_gone_quota_gone"
     hostname = "tfcdev-326ff8f0.ngrok.io"
     workspaces {
       name = "random-null-resources"
@@ -41,16 +41,6 @@ resource "random_pet" "always_new_name" {
 resource "random_uuid" "test" {
 } #generates random uuid string that is intended to be used as unique identifiers/names for other resources
 
-
-# The null_resource resource implements the standard resource lifecycle but takes no further action.
-# Example, whenever a new ec2 instance resource is created, triggers will take note of the new id create, then a null_resource instance will be replaced gathering data about that ec2 instance. To gather data you could add inside the block: 
-# provisioner "remote-exec" {
-#   inline = [
-#       "bootstrap-cluster.sh ${join(" ",
-#       aws_instance.cluster.*.private_ip)}",
-#     ]
-# } 
-# Everythime null_resource gets replaced the remote-exec provisioner will be re-run.
 resource "null_resource" "username" {
   triggers = {
     # Generate a new username each time we switch the value of the variable username
@@ -83,42 +73,9 @@ output "variable_username" {
   value = "Username is ${var.username}"
 }
 
-
-# output "workspace_name" {
-#   value = terraform.workspace
-# }
-
 output "random_resource_always_new_name_id" {
   value = { name_of_pet : random_pet.always_new_name.id }
 }
-
-# terraform {
-#   backend "remote" {
-#     hostname = "tfcdev-326ff8f0.ngrok.io"
-#     organization = "hashicorp"
-
-#     workspaces {
-#       name = "luces-testing-wsid"
-#     }
-#     # required_version = ">= 1.0.7, < 1.0.9"
-#   }
-# }
-
-# terraform {
-#   backend "local" {
-#     # path = "./tf.state"
-#   }
-# }
-
-# terraform {
-#   backend "pg" {
-#     conn_str = "postgres://barrettclark@localhost/barrettclark?sslmode=disable"
-#     workspaces {
-#       name = "wk3"
-#     }
-#   }
-# }
-
 
 variable "name_length" {
   default = 4
