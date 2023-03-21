@@ -38,10 +38,10 @@ resource "random_pet" "always_new_name" {
   length = 3
 }
 
-resource "random_uuid" "test" {
-} #generates random uuid string that is intended to be used as unique identifiers/names for other resources
-resource "random_uuid" "test2" {
-}
+# resource "random_uuid" "test" {
+# } #generates random uuid string that is intended to be used as unique identifiers/names for other resources
+# resource "random_uuid" "test2" {
+# }
 
 resource "null_resource" "username" {
   triggers = {
@@ -57,15 +57,15 @@ resource "null_resource" "random_uuid" {
   }
 }
 
-resource "null_resource" "a" {
-}
+# resource "null_resource" "a" {
+# }
 
-resource "null_resource" "b" {
-  depends_on = [
-    "null_resource.a",
-    "null_resource.random_uuid"
-    ] # WARNING: Quoted references are deprecated
-}
+# resource "null_resource" "b" {
+#   depends_on = [
+#     "null_resource.a",
+#     "null_resource.random_uuid"
+#     ] # WARNING: Quoted references are deprecated
+# }
 
 # output "null_resource_username_id" {
 #   value = "Changed to ${null_resource.username.id}"
