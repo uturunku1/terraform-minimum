@@ -82,6 +82,9 @@ resource "null_resource" "b" {
 variable "name_length" {
   default = 4
 }
+variable "name_length2" {
+  default = 4
+}
 
 # resource "random_pet" "always_error" {
 #   lifecycle {
