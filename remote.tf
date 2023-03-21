@@ -60,12 +60,12 @@ resource "null_resource" "random_uuid" {
 resource "null_resource" "a" {
 }
 
-# resource "null_resource" "b" {
-#   depends_on = [
-#     "null_resource.a",
-#     "null_resource.random_uuid"
-#     ] # WARNING: Quoted references are deprecated
-# }
+resource "null_resource" "b" {
+  depends_on = [
+    "null_resource.a",
+    "null_resource.random_uuid"
+    ] # WARNING: Quoted references are deprecated
+}
 
 # output "null_resource_username_id" {
 #   value = "Changed to ${null_resource.username.id}"
@@ -79,9 +79,9 @@ resource "null_resource" "a" {
 #   value = { name_of_pet : random_pet.always_new_name.id }
 # }
 
-# variable "name_length" {
-#   default = 4
-# }
+variable "name_length" {
+  default = 4
+}
 
 # resource "random_pet" "always_error" {
 #   lifecycle {
