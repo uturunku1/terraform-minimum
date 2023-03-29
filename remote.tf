@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "lucesorg-only-applylimitflag"
+    organization = "myorg-only-applylimitflag"
     hostname = "tfcdev-326ff8f0.ngrok.io"
     workspaces {
       name = "random-null-resources"
