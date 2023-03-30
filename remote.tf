@@ -67,9 +67,9 @@ resource "null_resource" "b" {
     ] # WARNING: Quoted references are deprecated
 }
 
-# output "null_resource_username_id" {
-#   value = "Changed to ${null_resource.username.id}"
-# }
+output "null_resource_username_id" {
+  value = "Changed to ${null_resource.username.id}"
+}
 
 # output "variable_username" {
 #   value = "Username is ${var.username}"
