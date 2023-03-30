@@ -79,9 +79,9 @@ output "random_resource_always_new_name_id" {
   value = { name_of_pet : random_pet.always_new_name.id }
 }
 
-variable "name_length" {
-  default = 4
-}
+# variable "name_length" {
+#   default = 4
+# }
 
 # resource "random_pet" "always_error" {
 #   lifecycle {
