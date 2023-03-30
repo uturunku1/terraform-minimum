@@ -71,17 +71,17 @@ output "null_resource_username_id" {
   value = "Changed to ${null_resource.username.id}"
 }
 
-# output "variable_username" {
-#   value = "Username is ${var.username}"
-# }
+output "variable_username" {
+  value = "Username is ${var.username}"
+}
 
-# output "random_resource_always_new_name_id" {
-#   value = { name_of_pet : random_pet.always_new_name.id }
-# }
+output "random_resource_always_new_name_id" {
+  value = { name_of_pet : random_pet.always_new_name.id }
+}
 
-# variable "name_length" {
-#   default = 4
-# }
+variable "name_length" {
+  default = 4
+}
 
 # resource "random_pet" "always_error" {
 #   lifecycle {
