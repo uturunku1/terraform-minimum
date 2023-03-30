@@ -57,19 +57,19 @@ resource "null_resource" "random_uuid" {
   }
 }
 
-resource "null_resource" "a" {
-}
+# resource "null_resource" "a" {
+# }
 
-resource "null_resource" "b" {
-  depends_on = [
-    "null_resource.a",
-    "null_resource.random_uuid"
-    ] # WARNING: Quoted references are deprecated
-}
+# resource "null_resource" "b" {
+#   depends_on = [
+#     "null_resource.a",
+#     "null_resource.random_uuid"
+#     ] # WARNING: Quoted references are deprecated
+# }
 
-output "null_resource_username_id" {
-  value = "Changed to ${null_resource.username.id}"
-}
+# output "null_resource_username_id" {
+#   value = "Changed to ${null_resource.username.id}"
+# }
 
 # output "variable_username" {
 #   value = "Username is ${var.username}"
